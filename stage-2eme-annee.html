@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stage 2ème année — Portfolio DRIDI Abd Errahmane</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <div class="nav-container">
+      <a class="nav-logo" href="index.html">DRIDI <span>Abd Errahmane</span></a>
+
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="bts-sio.html">BTS SIO</a></li>
+
+        <li>
+          <button class="nav-dropdown-toggle" aria-haspopup="true">
+            Stages <span class="arrow">&#9660;</span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="stage-1ere-annee.html">Stage 1ère année</a>
+            <a href="stage-2eme-annee.html">Stage 2ème année</a>
+          </div>
+        </li>
+
+        <li><a href="veille-technologique.html">Veille Technologique</a></li>
+        <li><a href="tableau-competences.html">Tableau de compétences E4</a></li>
+
+        <li>
+          <button id="theme-toggle" aria-label="Changer de thème">☾ Thème sombre</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== CONTENU PRINCIPAL ===== -->
+  <main>
+
+    <!-- Page de garde -->
+    <div class="rapport-cover">
+      <h1>Rapport de Stage<br>Infrastructure et Sécurisation des Services Réseaux</h1>
+      <div class="cover-meta">
+        <p>Filière : BTS SIO – Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</p>
+        <p>Lieu de stage : GRETA Colmar — 74 rue du Logelbach, Colmar</p>
+        <p>Période : Du 2 mars au 10 avril 2026</p>
+        <p>Tuteur : M. Gissinger Jean-Daniel</p>
+        <p>Rédigé par : DRIDI Abd Errahmane</p>
+      </div>
+    </div>
+
+    <!-- Sommaire -->
+    <div class="rapport-section">
+      <h2><span class="num">&#9776;</span> Sommaire</h2>
+      <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#entreprise">Présentation de l'entreprise : le réseau des GRETA</a>
+          <ul>
+            <li><a href="#histoire">Un demi-siècle d'engagement pour la formation (1974–2024)</a></li>
+            <li><a href="#structure">Une structure unique : l'agilité au service du public</a></li>
+            <li><a href="#evolutions">Évolutions et adaptations face aux crises</a></li>
+            <li><a href="#greta-alsace">Le GRETA Alsace Sud : mon lieu de stage</a></li>
+          </ul>
+        </li>
+        <li><a href="#techniques">Aspects techniques : missions et réalisations</a>
+          <ul>
+            <li><a href="#virtualisation">Administration de l'infrastructure de virtualisation et MCO (Semaines 1–2)</a></li>
+            <li><a href="#reseau">Ingénierie réseau et contournement de restrictions (Semaine 3)</a></li>
+            <li><a href="#rustdesk">Projet majeur : déploiement et durcissement de RustDesk (Semaines 4–6)</a></li>
+          </ul>
+        </li>
+        <li><a href="#competences">Compétences mobilisées (Bloc 1)</a></li>
+        <li><a href="#veille">Veille technologique : RustDesk et la souveraineté numérique</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#annexes">Annexes</a></li>
+      </ol>
+    </div>
+
+    <!-- 1. Introduction -->
+    <div class="rapport-section" id="introduction">
+      <h2><span class="num">1</span> Introduction</h2>
+      <p>
+        Ce rapport retrace mon immersion de six semaines au sein du service informatique du GRETA Colmar. Dans le cadre de ma deuxième année de BTS SIO option SISR, j'ai été amené à travailler sur des problématiques concrètes d'administration système, de virtualisation et de cybersécurité. Mon stage s'est articulé autour de deux axes majeurs : la maintenance d'une infrastructure de virtualisation existante et le déploiement d'une solution d'assistance à distance souveraine et hautement sécurisée.
+      </p>
+    </div>
+
+    <!-- 2. Présentation de l'entreprise -->
+    <div class="rapport-section" id="entreprise">
+      <h2><span class="num">2</span> Présentation de l'entreprise : le réseau des GRETA</h2>
+
+      <h3 class="subsection-title" id="histoire">2.1. Un demi-siècle d'engagement pour la formation (1974–2024)</h3>
+      <p>
+        L'histoire du réseau des GRETA (Groupements d'Établissements) est indissociable de l'évolution du droit à la formation en France.
+      </p>
+      <ul>
+        <li><strong>La Genèse (1971–1974) :</strong> Tout commence avec la loi Delors de juillet 1971, qui instaure le droit des salariés à la formation et oblige les entreprises à participer à son financement. Sous l'impulsion du ministère de l'Éducation nationale, l'idée est de mobiliser les plateaux techniques et les compétences humaines des lycées et collèges pour former des adultes.</li>
+        <li><strong>La Naissance (1974) :</strong> Le premier GRETA voit le jour en 1974 à Clichy-la-Garenne. L'ambition est claire : faire de l'Éducation nationale le premier opérateur de formation continue. En moins de cinq ans, 400 structures sont créées sur tout le territoire.</li>
+      </ul>
+
+      <h3 class="subsection-title" id="structure">2.2. Une structure unique : l'agilité au service du public</h3>
+      <p>La particularité historique des GRETA réside dans leur modèle économique et organisationnel :</p>
+      <ul>
+        <li><strong>Appartenance à l'Éducation nationale :</strong> Ils utilisent les ressources publiques (locaux, matériels pédagogiques, enseignants).</li>
+        <li><strong>Autonomie financière :</strong> Contrairement aux établissements scolaires classiques, les GRETA ne reçoivent pas de subventions d'État pour leur fonctionnement. Ils doivent générer leurs propres ressources en vendant des prestations de formation, ce qui leur confère une agilité proche de celle d'une entreprise privée.</li>
+        <li><strong>Les Conseillers en Formation Continue (CFC) :</strong> Apparus dès 1975, ces acteurs sont le pivot du réseau. Leur rôle est d'analyser les besoins des entreprises, de concevoir des parcours de formation sur mesure et de démarcher de nouveaux partenaires.</li>
+      </ul>
+
+      <h3 class="subsection-title" id="evolutions">2.3. Évolutions et adaptations face aux crises</h3>
+      <p>Au fil des décennies, le réseau a su se transformer pour répondre aux enjeux de la société :</p>
+      <ul>
+        <li><strong>Années 80 – La lutte contre le chômage :</strong> Suite aux chocs pétroliers, les GRETA se tournent vers la reconversion massive des licenciés et l'insertion des jeunes sans qualification, en partenariat avec l'ANPE (devenue France Travail).</li>
+        <li><strong>Années 2000–2015 – L'individualisation :</strong> Avec l'arrivée du DIF (Droit Individuel à la Formation) puis du CPF (Compte Personnel de Formation), le bénéficiaire devient acteur de son parcours. Le GRETA adapte son ingénierie pour proposer des parcours modulaires et des « unités capitalisables ».</li>
+        <li><strong>Aujourd'hui – L'apprentissage et l'innovation :</strong> Le réseau est désormais un acteur majeur de l'apprentissage et de la VAE (Validation des Acquis de l'Expérience). Il s'inscrit dans une démarche d'innovation constante (digitalisation, plateaux techniques de pointe).</li>
+      </ul>
+
+      <h3 class="subsection-title" id="greta-alsace">2.4. Le GRETA Alsace Sud : mon lieu de stage</h3>
+      <p>
+        Le GRETA Alsace Sud, dont le siège est situé au 74 rue du Logelbach à Colmar, s'inscrit dans cette longue tradition d'excellence.
+      </p>
+      <p>
+        En tant que stagiaire en BTS SIO option SISR, j'ai pu constater que l'ambition pionnière de 1974 est toujours d'actualité. Le service informatique dans lequel j'ai évolué gère une infrastructure complexe (le plateau technique « Admin Infra Sécurité ») qui sert de support pédagogique aux stagiaires adultes.
+      </p>
+      <p>
+        L'enjeu technique de mon stage (déploiement de RustDesk, maintenance de clusters VMware) répond directement à l'un des piliers historiques du réseau : l'adaptation permanente aux changements technologiques pour offrir un environnement de formation performant et sécurisé.
+      </p>
+    </div>
+
+    <!-- 3. Aspects techniques -->
+    <div class="rapport-section" id="techniques">
+      <h2><span class="num">3</span> Aspects techniques : missions et réalisations</h2>
+
+      <h3 class="subsection-title" id="virtualisation">3.1. Administration de l'infrastructure de virtualisation et MCO (Semaines 1–2)</h3>
+      <p>
+        La première phase de mon stage a été consacrée au maintien en condition opérationnelle (MCO) de l'infrastructure « Admin Infra Sécurité » du GRETA.
+      </p>
+      <ul>
+        <li>
+          <strong>Audit et remise à niveau matérielle :</strong> J'ai débuté par une mise à jour critique des firmwares via l'interface iDRAC sur un parc de serveurs Dell PowerEdge. Cette opération était indispensable pour corriger des failles de sécurité au niveau du BIOS et stabiliser les contrôleurs de stockage. J'ai ensuite procédé à la configuration de grappes RAID (5, 6, 60). Le choix du RAID 60 sur les serveurs de stockage a été motivé par la nécessité de combiner une haute tolérance aux pannes (double parité) et des performances accrues en lecture/écriture.
+          <div class="info-box mt-2">
+            <strong>Difficulté rencontrée</strong>
+            Certains serveurs ne reconnaissaient pas le débit 10 Gb après l'installation de nouvelles cartes SFP+. <strong>Solution :</strong> Mise à jour des pilotes spécifiques et vérification de la compatibilité des modules émetteurs-récepteurs.
+          </div>
+        </li>
+        <li>
+          <strong>Déploiement du « Cluster AIS » :</strong> J'ai installé l'hyperviseur VMware ESXi sur un total de 14 serveurs. Pour centraliser l'administration, j'ai déployé la vCenter Server Appliance (VCSA). J'ai structuré l'inventaire en créant le Datacenter « LAN_PROD » et le cluster de calcul « CLUSTER_LAB ».
+        </li>
+        <li>
+          <strong>Haute Disponibilité (HA), vMotion et stockage NFS :</strong> Le défi majeur a été la mise en place d'une architecture hautement disponible. Pour ce faire, j'ai configuré un serveur de stockage partagé sous Debian Linux utilisant le protocole NFS. Afin de permettre le vMotion (migration de VM à chaud) et le vSphere HA, j'ai dû segmenter physiquement et logiquement les flux réseaux. J'ai créé des interfaces VMkernel dédiées pour :
+          <ol>
+            <li>Le management (gestion des hôtes).</li>
+            <li>Le flux vMotion (bande passante prioritaire).</li>
+            <li>Le trafic NFS (accès au stockage).</li>
+          </ol>
+          J'ai configuré le Heartbeat (réseau et stockage) pour éviter les scénarios de « Split-Brain » (où deux hôtes pensent être seuls maîtres), garantissant ainsi un basculement automatique et fiable des VMs en cas de défaillance matérielle.
+        </li>
+      </ul>
+
+      <h3 class="subsection-title" id="reseau">3.2. Ingénierie réseau et contournement de restrictions (Semaine 3)</h3>
+      <p>
+        Lors de la maintenance corrective du serveur Proxmox VE (SRV01), j'ai été confronté à des politiques de sécurité réseau très restrictives.
+      </p>
+      <ul>
+        <li><strong>Analyse du blocage DPI :</strong> Le pare-feu de l'entreprise utilisait une inspection de paquets en profondeur (Deep Packet Inspection) sur le port 80. Cela interceptait les requêtes HTTP vers les dépôts officiels Proxmox, rendant toute mise à jour ou installation de paquets impossible.</li>
+        <li><strong>Mise en œuvre du tunneling SSH :</strong> Pour contourner ce filtrage sans compromettre la sécurité, j'ai mis en place un Tunnel SSH Reverse. En encapsulant le trafic HTTP de mise à jour dans un tunnel SSH chiffré (autorisé par le firewall), j'ai pu lier le port local du serveur à mon poste client agissant comme proxy.</li>
+        <li><strong>Résolution des conflits SSL :</strong> L'inspection du trafic générait des erreurs de certificats. J'ai configuré l'option <code>Acquire::https::Verify-Peer=false</code> dans les paramètres APT pour forcer la confiance envers mon tunnel local, permettant ainsi le passage au noyau Linux 6.8.12-9.</li>
+        <li><strong>Segmentation physique :</strong> J'ai également effectué un brassage complet de la baie informatique, isolant les flux administratifs des flux pédagogiques via des VLANs pour optimiser la clarté et la sécurité du réseau.</li>
+      </ul>
+
+      <h3 class="subsection-title" id="rustdesk">3.3. Projet majeur : déploiement et durcissement de RustDesk (Semaines 4–6)</h3>
+      <p>
+        Ma mission principale a consisté à concevoir et déployer une infrastructure d'assistance à distance souveraine basée sur RustDesk.
+      </p>
+      <ul>
+        <li>
+          <strong>Évolution de l'architecture (du POC à la production) :</strong>
+          <ul>
+            <li><em>Phase de POC (Debian + Docker) :</em> J'ai d'abord validé le concept sur Debian via Docker-Compose.</li>
+            <li><em>Migration Alpine Linux (Bare Metal) :</em> Pour maximiser la sécurité et la performance, j'ai migré vers Alpine Linux. Ce choix de distribution « ultra-légère » a permis de réduire l'empreinte système de 1 Go à moins de 150 Mo. En supprimant les couches Docker, j'ai réduit la surface d'attaque du serveur (Hardening).</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Infrastructure à clés publiques (PKI) et sécurisation TLS :</strong> Pour pallier les erreurs de « Key Mismatch » et sécuriser les sessions, j'ai mis en place une PKI complète :
+          <ul>
+            <li>Génération d'une Autorité de Certification (Root CA).</li>
+            <li>Création de certificats serveurs avec l'extension SAN (Subject Alternative Name) incluant l'adresse IP et le FQDN du serveur. Cela garantit que chaque connexion entre le technicien et le client est chiffrée de bout en bout et authentifiée par un certificat de confiance.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Automatisation et persistance :</strong> Sous Alpine Linux, j'ai rédigé des scripts de service OpenRC personnalisés pour les démons <code>hbbs</code> (serveur d'ID) et <code>hbbr</code> (serveur de relais). Ces scripts assurent le redémarrage automatique des services après un reboot ou un incident, garantissant une disponibilité de 99,9 %.
+        </li>
+        <li>
+          <strong>Accessibilité et documentation :</strong> J'ai finalisé le projet par une documentation rigoureuse des règles de NAT nécessaires pour l'accès externe et la rédaction d'un manuel utilisateur pour les agents du GRETA.
+        </li>
+      </ul>
+    </div>
+
+    <!-- 4. Compétences mobilisées -->
+    <div class="rapport-section" id="competences">
+      <h2><span class="num">4</span> Compétences mobilisées (Bloc 1) : support et mise à disposition de services informatiques</h2>
+      <p>
+        Le Bloc 1 constitue le socle des compétences informatiques communes. Durant mes six semaines au GRETA de Colmar, j'ai mobilisé ces savoir-faire pour assurer la continuité de service et l'évolution de l'infrastructure.
+      </p>
+
+      <h3 class="subsection-title">4.1. Gérer le patrimoine informatique</h3>
+      <p>La gestion du patrimoine ne se limite pas à l'inventaire ; elle inclut le maintien en condition opérationnelle (MCO) et l'optimisation des ressources existantes.</p>
+      <ul>
+        <li><strong>Maintenance évolutive des serveurs :</strong> En intervenant sur les serveurs Dell PowerEdge (mise à jour iDRAC, remplacement de disques, upgrade cartes 10 Gb), j'ai assuré la pérennité du matériel.</li>
+        <li><strong>Sécurisation des données par la redondance :</strong> La configuration de grappes RAID 5, 6 et 60 a permis de garantir la disponibilité des données face aux pannes matérielles. J'ai dû analyser les besoins en entrées/sorties (I/O) pour choisir le type de RAID le plus adapté à chaque serveur.</li>
+        <li><strong>Déploiement et gestion de parc :</strong> J'ai préparé des postes clients pour les sessions ASSR, incluant le déploiement d'images système et la jointure au domaine Active Directory. Cette tâche garantit que chaque utilisateur dispose d'un environnement de travail conforme aux politiques de sécurité de l'établissement.</li>
+      </ul>
+
+      <h3 class="subsection-title">4.2. Répondre aux incidents</h3>
+      <p>La résolution d'incidents a été un aspect quotidien de mon stage, nécessitant une méthodologie de diagnostic rigoureuse.</p>
+      <ul>
+        <li><strong>Diagnostic de pannes système et réseau :</strong> Lors du passage à Alpine Linux pour RustDesk, l'absence de drivers pour les interfaces réseau Broadcom a immobilisé le serveur. J'ai dû identifier le modèle exact du contrôleur et compiler ou installer les modules manquants en ligne de commande.</li>
+        <li><strong>Résolution de problèmes de sécurité (SSL/TLS) :</strong> J'ai résolu les conflits de certificats lors de l'utilisation du tunnel SSH pour Proxmox et les erreurs de « Key Mismatch » sur RustDesk. Cela a impliqué la compréhension profonde des mécanismes de certification et l'utilisation d'OpenSSL pour générer des certificats conformes (extension SAN).</li>
+        <li><strong>Support utilisateur (Helpdesk) :</strong> J'ai traité diverses demandes de niveau 1 et 2 pour les agents du GRETA, allant de problèmes de connectivité réseau à la configuration de logiciels spécifiques, en utilisant des outils de prise en main à distance.</li>
+      </ul>
+
+      <h3 class="subsection-title">4.3. Développer la présence en ligne de l'organisation</h3>
+      <p>Bien que centré sur l'infrastructure, j'ai contribué à l'accessibilité des services.</p>
+      <ul>
+        <li><strong>Mise à disposition de services sécurisés :</strong> Le déploiement du serveur de relais RustDesk permet au GRETA de disposer d'un service de support accessible par les formateurs et stagiaires.</li>
+        <li><strong>Configuration des accès distants :</strong> J'ai travaillé sur la redirection de ports (NAT) et les règles de pare-feu pour permettre un accès externe sécurisé, tout en isolant les flux critiques via des VLANs.</li>
+      </ul>
+
+      <h3 class="subsection-title">4.4. Travailler en mode projet</h3>
+      <p>L'organisation de mon travail a suivi une démarche projet rigoureuse, essentielle pour l'épreuve E5.</p>
+      <ul>
+        <li><strong>Planification et suivi :</strong> J'ai utilisé des tableaux de charge et des comptes rendus hebdomadaires pour suivre l'avancement de mes tâches. Mon planning prévisionnel a été respecté à 100 % dès la semaine 6, malgré les imprévus techniques.</li>
+        <li><strong>Analyse de faisabilité :</strong> Avant de déployer RustDesk, j'ai rédigé un mail formel d'étude de faisabilité à mon tuteur (M. Gissinger), présentant les avantages (coût, sécurité, souveraineté) et les risques potentiels.</li>
+        <li><strong>Documentation technique :</strong> J'ai produit un dossier technique complet pour la passation du projet, incluant les procédures d'installation sous Alpine Linux et les schémas de l'infrastructure virtuelle du « Cluster AIS ».</li>
+      </ul>
+
+      <h3 class="subsection-title">4.5. Organiser son développement professionnel</h3>
+      <ul>
+        <li><strong>Veille et auto-formation :</strong> Pour réussir la migration vers Alpine Linux et le durcissement du serveur, j'ai dû consulter des documentations techniques en anglais et expérimenter de nouvelles méthodes de gestion de services (OpenRC).</li>
+        <li><strong>Adaptation aux normes de l'entreprise :</strong> J'ai veillé au respect de la confidentialité des données et à la clarté du brassage physique des baies réseau, facilitant ainsi le travail futur de l'équipe informatique.</li>
+      </ul>
+    </div>
+
+    <!-- 5. Veille technologique -->
+    <div class="rapport-section" id="veille">
+      <h2><span class="num">5</span> Veille technologique : RustDesk et la souveraineté numérique</h2>
+
+      <h3 class="subsection-title">5.1. Méthodologie de veille</h3>
+      <p>Pour réaliser cette veille, j'ai mis en place une routine hebdomadaire de 20 minutes (chaque lundi matin) en suivant une méthodologie structurée :</p>
+      <ol>
+        <li><strong>Collecter :</strong> Utilisation de Feedly pour agréger les flux RSS de sites spécialisés (L'Informaticien, Le Monde Informatique) et de Google Alerts sur les mots-clés « RustDesk », « Remote Desktop Security » et « Souveraineté numérique ».</li>
+        <li><strong>Filtrer :</strong> Sélection des articles traitant spécifiquement de l'auto-hébergement (Self-hosting) et des vulnérabilités des solutions propriétaires (TeamViewer, AnyDesk).</li>
+        <li><strong>Analyser :</strong> Étude de l'impact du passage à des solutions Open Source sur la sécurité des données au sein d'un organisme comme le GRETA.</li>
+        <li><strong>Synthétiser :</strong> Rédaction de fiches dans Notion résumant les évolutions logicielles et les bonnes pratiques de durcissement (Hardening).</li>
+        <li><strong>Diffuser :</strong> Présentation des résultats à mon tuteur, M. Gissinger, pour valider les choix techniques du projet.</li>
+      </ol>
+
+      <h3 class="subsection-title">5.2. Sujet : l'alternative RustDesk face aux enjeux de souveraineté</h3>
+      <p>
+        <strong>Problématique :</strong> Comment garantir une assistance à distance performante tout en conservant la maîtrise totale des flux et des données de connexion ?
+      </p>
+      <p>
+        <strong>Analyse technique :</strong> Le secteur de l'informatique en 2026 est marqué par une adoption massive de l'IA et une augmentation des cyberattaques sur les outils d'administration. Les solutions propriétaires classiques (SaaS) font transiter les données par des serveurs tiers, ce qui pose un risque de confidentialité.
+      </p>
+      <ul>
+        <li><strong>La réponse par RustDesk :</strong> Contrairement aux solutions cloud, RustDesk permet d'auto-héberger son propre serveur de signal (ID) et de relais. Pendant mon stage, j'ai analysé que l'utilisation d'Alpine Linux pour héberger RustDesk répondait à la fois à un besoin de performance (empreinte mémoire &lt; 150 Mo) et de sécurité (réduction de la surface d'attaque).</li>
+        <li><strong>Sécurisation renforcée :</strong> Ma veille m'a permis d'identifier que les clés de sécurité par défaut n'étaient pas suffisantes pour un environnement de production. J'ai donc implémenté une PKI (Public Key Infrastructure) avec des certificats TLS et l'extension SAN, une pratique recommandée par l'ANSSI pour garantir l'identité des serveurs.</li>
+      </ul>
+
+      <h3 class="subsection-title">5.3. Impact métier et conclusion de la veille</h3>
+      <p>Cette veille a démontré qu'une solution « Open Source » auto-hébergée offre une agilité supérieure :</p>
+      <ul>
+        <li><strong>Coût :</strong> Suppression des licences annuelles onéreuses.</li>
+        <li><strong>Sécurité :</strong> Maîtrise de la chaîne de confiance (chiffrement de bout en bout géré en interne).</li>
+        <li><strong>Souveraineté :</strong> Aucune dépendance vis-à-vis d'un éditeur étranger, les logs et les flux restent au sein du réseau du GRETA.</li>
+      </ul>
+      <p><strong>Outils de veille utilisés pour ce sujet :</strong></p>
+      <ul>
+        <li><strong>CERT-FR :</strong> Pour surveiller les vulnérabilités sur les protocoles de bureau à distance.</li>
+        <li><strong>GitHub :</strong> Suivi du « Changelog » officiel de RustDesk pour anticiper les mises à jour de sécurité.</li>
+        <li><strong>Perplexity AI :</strong> Pour synthétiser les comparatifs de performances entre les distributions Linux légères (Alpine vs Debian Slim).</li>
+      </ul>
+    </div>
+
+    <!-- 6. Conclusion -->
+    <div class="rapport-section" id="conclusion">
+      <h2><span class="num">6</span> Conclusion</h2>
+      <p>
+        Ces six semaines de stage au sein du pôle informatique du GRETA Alsace Sud ont été une étape charnière et déterminante dans mon parcours en BTS SIO option SISR. Cette expérience m'a offert l'opportunité de confronter les concepts théoriques abordés en formation à la réalité complexe d'un environnement de production en constante exploitation.
+      </p>
+
+      <h3 class="subsection-title">6.1. Un bilan technique positif</h3>
+      <p>
+        Ma plus grande satisfaction réside dans la réussite et l'aboutissement du projet RustDesk. Partant d'une simple étude de faisabilité, j'ai pu mener ce projet jusqu'à sa mise en production sécurisée sur une infrastructure Alpine Linux. Le fait que cette solution soit aujourd'hui documentée, durcie (Hardening) et opérationnelle à 100 % apporte une réelle valeur ajoutée au GRETA, offrant une alternative souveraine et économique pour l'assistance à distance.
+      </p>
+      <p>
+        Par ailleurs, mon immersion dans l'administration du Cluster AIS (VMware, stockage NFS, Haute Disponibilité) m'a permis d'acquérir une rigueur indispensable dans la gestion des infrastructures critiques et de la redondance des données.
+      </p>
+
+      <h3 class="subsection-title">6.2. Apports personnels et professionnels</h3>
+      <p>Au-delà des compétences purement techniques, ce stage m'a permis de développer des savoir-être essentiels :</p>
+      <ul>
+        <li><strong>Autonomie et réactivité :</strong> Face à des problématiques imprévues (filtrage DPI sur Proxmox ou pilotes Broadcom manquants), j'ai appris à mobiliser des ressources de documentation technique et à proposer des solutions de contournement fiables (Tunneling SSH).</li>
+        <li><strong>Communication professionnelle :</strong> Les échanges avec mon tuteur, M. Gissinger, et le support apporté aux utilisateurs m'ont permis d'adapter mon discours technique en fonction de mes interlocuteurs.</li>
+        <li><strong>Gestion de projet :</strong> Le respect strict de mon planning prévisionnel et la rédaction systématique de livrables (PVI, CRH, documentations techniques) m'ont sensibilisé à l'importance de la traçabilité en informatique.</li>
+      </ul>
+
+      <h3 class="subsection-title">6.3. Perspectives</h3>
+      <p>
+        Ce stage confirme mon intérêt pour les métiers de l'administration système et de la cybersécurité. Il m'a conforté dans mon choix de spécialisation SISR et m'a donné les bases solides nécessaires pour aborder avec confiance mes épreuves professionnelles (E4 et E5) ainsi que ma future insertion sur le marché de l'emploi.
+      </p>
+      <p>
+        Je quitte le GRETA avec le sentiment d'avoir contribué activement au maintien et à l'évolution de son patrimoine informatique, tout en ayant franchi un palier significatif dans mon apprentissage métier.
+      </p>
+    </div>
+
+    <!-- 7. Annexes -->
+    <div class="rapport-section" id="annexes">
+      <h2><span class="num">7</span> Annexes</h2>
+
+      <h3 class="subsection-title">Annexe 1 : Documentation du projet « Cluster AIS » (Virtualisation)</h3>
+      <ul>
+        <li><strong>7.1.1. Schéma de l'infrastructure virtuelle :</strong> Un diagramme montrant les 3 hôtes ESXi, le serveur de stockage Debian (NFS) et l'appliance vCenter.</li>
+        <li><strong>7.1.2. Tableau de configuration IP :</strong> Détail de l'adressage pour les différents flux (Management, vMotion, NFS).</li>
+        <li><strong>7.1.3. Capture d'écran vCenter :</strong> Une vue globale de l'inventaire montrant le cluster « CLUSTER_LAB » avec les hôtes en état « Connected ».</li>
+      </ul>
+
+      <h3 class="subsection-title">Annexe 2 : Ingénierie réseau et sécurisation</h3>
+      <ul>
+        <li><strong>7.2.1. Plan de brassage de la baie :</strong> Schéma ou tableau indiquant la correspondance entre les ports des switchs et les prises murales/serveurs.</li>
+        <li><strong>7.2.2. Schéma du Tunnel SSH Reverse :</strong> Représentation visuelle de la manière dont le pare-feu DPI a été contourné pour mettre à jour Proxmox.</li>
+        <li><strong>7.2.3. Extrait de configuration APT :</strong> Capture d'écran du fichier de configuration avec l'option <code>Verify-Peer=false</code>.</li>
+      </ul>
+
+      <h3 class="subsection-title">Annexe 3 : Dossier technique RustDesk (le projet phare)</h3>
+      <ul>
+        <li><strong>7.3.1. Comparatif OS (Debian vs Alpine) :</strong> Tableau comparatif montrant le gain en ressources (RAM/Disque) et l'analyse de la surface d'attaque.</li>
+        <li><strong>7.3.2. Script de service OpenRC :</strong> Copie textuelle du script créé pour automatiser le lancement de <code>hbbs</code> et <code>hbbr</code> sur Alpine Linux.</li>
+        <li><strong>7.3.3. Arborescence de la PKI :</strong> Capture d'écran de la hiérarchie des certificats (Root CA, Certificat Serveur avec extension SAN).</li>
+        <li><strong>7.3.4. Preuve de fonctionnement :</strong> Capture d'écran de la console RustDesk montrant une connexion active chiffrée.</li>
+      </ul>
+
+      <h3 class="subsection-title">Annexe 4 : Documents administratifs et suivi</h3>
+      <ul>
+        <li><strong>7.4.1. Procès-Verbal d'Installation (PVI) :</strong> Copie du document signé listant les missions de maintenance.</li>
+        <li><strong>7.4.2. Étude de faisabilité :</strong> Copie du mail formel envoyé à M. Gissinger en semaine 4 pour proposer l'alternative RustDesk.</li>
+        <li><strong>7.4.3. Tableau de bord hebdomadaire :</strong> Récapitulatif des 6 semaines (synthèse des CRH) avec le pourcentage d'avancement.</li>
+      </ul>
+
+      <h3 class="subsection-title">Annexe 5 : Lexique technique</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Terme</th>
+              <th>Définition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>DPI</strong> (Deep Packet Inspection)</td>
+              <td>Analyse approfondie des paquets par le pare-feu.</td>
+            </tr>
+            <tr>
+              <td><strong>vMotion</strong></td>
+              <td>Technologie VMware permettant de déplacer une VM allumée entre deux serveurs sans coupure.</td>
+            </tr>
+            <tr>
+              <td><strong>RAID 60</strong></td>
+              <td>Combinaison de la performance du RAID 0 et de la haute sécurité du RAID 6.</td>
+            </tr>
+            <tr>
+              <td><strong>SAN</strong> (Subject Alternative Name)</td>
+              <td>Extension de certificat SSL permettant de valider plusieurs noms ou IP.</td>
+            </tr>
+            <tr>
+              <td><strong>Hardening</strong> (Durcissement)</td>
+              <td>Processus de sécurisation d'un système en limitant ses vulnérabilités.</td>
+            </tr>
+            <tr>
+              <td><strong>PKI</strong> (Public Key Infrastructure)</td>
+              <td>Ensemble de mécanismes cryptographiques permettant de gérer des certificats numériques.</td>
+            </tr>
+            <tr>
+              <td><strong>OpenRC</strong></td>
+              <td>Système d'initialisation et de gestion de services utilisé par Alpine Linux.</td>
+            </tr>
+            <tr>
+              <td><strong>MCO</strong> (Maintien en Condition Opérationnelle)</td>
+              <td>Ensemble des actions permettant de maintenir un système informatique en état de fonctionnement.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>Portfolio BTS SIO &mdash; DRIDI Abd Errahmane &mdash; Option SISR &mdash; 2024&ndash;2026</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

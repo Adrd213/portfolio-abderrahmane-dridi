@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tableau de compétences E4 — Portfolio DRIDI Abd Errahmane</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Styles spécifiques au tableau de compétences */
+    .comp-table th, .comp-table td {
+      text-align: center;
+      vertical-align: middle;
+    }
+    .comp-table td:first-child {
+      text-align: left;
+      font-weight: 500;
+    }
+    .comp-table td:nth-child(2) {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+    .check-yes {
+      color: #16a34a;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .check-no {
+      color: var(--border);
+      font-size: 0.9rem;
+    }
+    .section-row td {
+      background: var(--table-head-bg) !important;
+      color: var(--table-head-text) !important;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-align: left !important;
+      letter-spacing: 0.3px;
+      padding: 0.6rem 1rem;
+    }
+    .bloc-header td {
+      background: var(--accent) !important;
+      color: #ffffff !important;
+      font-weight: 700;
+      text-align: left !important;
+      font-size: 0.9rem;
+      padding: 0.75rem 1rem;
+    }
+    .col-header {
+      font-size: 0.72rem;
+      line-height: 1.3;
+      max-width: 80px;
+    }
+    .legend-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+      margin: 1rem 0;
+    }
+    .legend-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+    }
+    .legend-item strong { display: block; color: var(--accent); margin-bottom: 0.2rem; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <div class="nav-container">
+      <a class="nav-logo" href="index.html">DRIDI <span>Abd Errahmane</span></a>
+
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="bts-sio.html">BTS SIO</a></li>
+
+        <li>
+          <button class="nav-dropdown-toggle" aria-haspopup="true">
+            Stages <span class="arrow">&#9660;</span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="stage-1ere-annee.html">Stage 1ère année</a>
+            <a href="stage-2eme-annee.html">Stage 2ème année</a>
+          </div>
+        </li>
+
+        <li><a href="veille-technologique.html">Veille Technologique</a></li>
+        <li><a href="tableau-competences.html" class="active">Tableau de compétences E4</a></li>
+
+        <li>
+          <button id="theme-toggle" aria-label="Changer de thème">☾ Thème sombre</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== CONTENU PRINCIPAL ===== -->
+  <main>
+
+    <div class="page-header">
+      <h1>Tableau de compétences E4</h1>
+      <p>BTS SIO — Annexe VI.5 — Épreuve E5 — Tableau de synthèse des réalisations 2024–2026</p>
+    </div>
+
+    <!-- Présentation -->
+    <div class="rapport-section">
+      <h2><span class="num">&#9432;</span> Présentation</h2>
+      <p>
+        Ce tableau de synthèse recense l'ensemble des réalisations effectuées en cours de formation et en milieu professionnel durant les deux années de BTS SIO option SISR. Pour chaque réalisation, les compétences du Bloc 1 mobilisées sont identifiées par une croix.
+      </p>
+      <p>
+        Le Bloc 1 regroupe les compétences de <strong>Support et mise à disposition de services informatiques</strong>, organisées en six activités principales.
+      </p>
+    </div>
+
+    <!-- Légende des compétences -->
+    <h2 class="section-title">Légende des activités (Bloc 1)</h2>
+    <div class="legend-grid">
+      <div class="legend-item">
+        <strong>A1 — Gérer le patrimoine informatique</strong>
+        Exploiter des référentiels, mettre en place des niveaux d'habilitation, vérifier la continuité de service, gérer les sauvegardes.
+      </div>
+      <div class="legend-item">
+        <strong>A2 — Répondre aux incidents</strong>
+        Collecter et orienter des demandes, traiter des incidents réseau, système et applicatifs.
+      </div>
+      <div class="legend-item">
+        <strong>A3 — Développer la présence en ligne</strong>
+        Valoriser l'image de l'organisation, référencer les services en ligne, participer à l'évolution du site web.
+      </div>
+      <div class="legend-item">
+        <strong>A4 — Travailler en mode projet</strong>
+        Analyser les objectifs, planifier les activités, évaluer les indicateurs de suivi.
+      </div>
+      <div class="legend-item">
+        <strong>A5 — Mettre en place et exploiter des services</strong>
+        Réaliser les tests d'intégration, déployer un service, accompagner les utilisateurs.
+      </div>
+      <div class="legend-item">
+        <strong>A6 — Organiser son développement professionnel</strong>
+        Mettre en place son environnement d'apprentissage, réaliser une veille informationnelle, développer son projet professionnel.
+      </div>
+    </div>
+
+    <!-- Tableau principal -->
+    <h2 class="section-title">Tableau de synthèse des réalisations</h2>
+    <div class="table-wrapper">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th style="text-align:left; min-width:280px;">Réalisation</th>
+            <th class="col-header">Période</th>
+            <th class="col-header">A1<br>Patrimoine</th>
+            <th class="col-header">A2<br>Incidents</th>
+            <th class="col-header">A3<br>Présence en ligne</th>
+            <th class="col-header">A4<br>Mode projet</th>
+            <th class="col-header">A5<br>Services</th>
+            <th class="col-header">A6<br>Dév. pro.</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- Section : En cours de formation -->
+          <tr class="section-row">
+            <td colspan="8">Réalisations en cours de formation</td>
+          </tr>
+
+          <tr>
+            <td>Gestion du patrimoine avec GLPI 10 &amp; OCS<br><small class="text-muted">Productions : Inventaire matériel, liaison LDAP, gestion des tickets incidents</small></td>
+            <td>22/04/25<br>20/05/25</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+          </tr>
+
+          <tr>
+            <td>Services de domaine et annuaire Active Directory<br><small class="text-muted">Productions : Contrôleur de domaine, GPO lecteurs réseaux, scripts de connexion</small></td>
+            <td>18/11/24<br>15/12/24</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+          </tr>
+
+          <tr>
+            <td>Sécurité périmétrique et Firewalling (PfSense/IpFire)<br><small class="text-muted">Productions : Portail captif, filtrage de flux, configuration DMZ</small></td>
+            <td>21/01/25<br>12/03/25</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+          </tr>
+
+          <tr>
+            <td>Supervision et audit de l'infrastructure (Zabbix/Nmap)<br><small class="text-muted">Productions : Tableaux de bord Zabbix, scans de vulnérabilités, tests d'intrusion</small></td>
+            <td>17/10/25<br>13/11/25</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+          </tr>
+
+          <tr>
+            <td>Automatisation des tâches d'administration<br><small class="text-muted">Productions : Scripts PowerShell complexes, fichiers Batch avec menus</small></td>
+            <td>13/01/25<br>24/02/25</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+          </tr>
+
+          <tr>
+            <td>Mise en place de services de communication (ToIP/QoS)<br><small class="text-muted">Productions : Serveur Asterisk/3CX, priorisation des flux voix</small></td>
+            <td>07/11/25<br>28/11/25</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+          </tr>
+
+          <tr>
+            <td>Simulation d'attaque par rançongiciel &amp; Sauvegarde<br><small class="text-muted">Productions : Plan de reprise d'activité, TrueNAS, UrBackup</small></td>
+            <td>29/01/26<br>13/02/26</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+          </tr>
+
+          <tr>
+            <td>Déploiement d'application Web en pré-production<br><small class="text-muted">Productions : Installation Apache/SQL, cahier des charges technique</small></td>
+            <td>24/11/25<br>12/01/26</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+          </tr>
+
+          <tr>
+            <td>Portfolio et Veille Technologique<br><small class="text-muted">Productions : Site Portfolio, fiches de veille, suivi de carrière</small></td>
+            <td>20/05/25<br>04/01/26</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-yes">&#10003;</td>
+          </tr>
+
+          <!-- Section : Stage 1ère année -->
+          <tr class="section-row">
+            <td colspan="8">Réalisations en milieu professionnel — 1ère année</td>
+          </tr>
+          <tr>
+            <td colspan="8" style="text-align:left; padding: 0.75rem 1rem; color: var(--text-secondary); font-style: italic; font-size: 0.875rem;">
+              Contenu à compléter lors de l'ajout du rapport de stage de première année.
+            </td>
+          </tr>
+
+          <!-- Section : Stage 2ème année -->
+          <tr class="section-row">
+            <td colspan="8">Réalisations en milieu professionnel — 2ème année (GRETA Alsace Sud)</td>
+          </tr>
+
+          <tr>
+            <td>Infrastructure de virtualisation vSphere HA<br><small class="text-muted">Productions : Schéma réseau, config RAID 5, installation ESXi &amp; VCSA, tests de basculement</small></td>
+            <td>02/03/26<br>13/03/26</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+          </tr>
+
+          <tr>
+            <td>Sécurisation des accès distants avec RustDesk<br><small class="text-muted">Productions : Déploiement Docker-Compose, création Root CA, certificats SSL/TLS, guide utilisateur</small></td>
+            <td>23/03/26<br>03/04/26</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+          </tr>
+
+          <tr>
+            <td>Maintenance et audit de l'infrastructure Proxmox<br><small class="text-muted">Productions : Mise à jour Noyau 6.8, tunnel SSH, configuration VPN Proton, correction dépôts HTTP</small></td>
+            <td>16/03/26<br>27/03/26</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+          </tr>
+
+          <tr>
+            <td>Segmentation et brassage réseau physique<br><small class="text-muted">Productions : Installation switchs/routeurs, configuration NAT/PAT via console Putty, plan de VLAN</small></td>
+            <td>02/03/26<br>20/03/26</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-yes">&#10003;</td>
+            <td class="check-no">&mdash;</td>
+          </tr>
+
+          <tr>
+            <td>Veille technologique : comparatif d'OS serveurs<br><small class="text-muted">Productions : Étude comparative Debian vs Alpine Linux, tests d'installation Bare Metal</small></td>
+            <td>30/03/26<br>03/04/26</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-no">&mdash;</td>
+            <td class="check-yes">&#10003;</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bilan par compétence -->
+    <h2 class="section-title">Bilan par activité</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>A1 — Gérer le patrimoine informatique</h3>
+        <p>Mobilisée lors de : GLPI/OCS, Active Directory, Zabbix/Nmap, automatisation, simulation ransomware, vSphere HA, Proxmox, brassage réseau.</p>
+        <div class="tags"><span class="tag">8 réalisations</span></div>
+      </div>
+      <div class="card">
+        <h3>A2 — Répondre aux incidents</h3>
+        <p>Mobilisée lors de : GLPI/OCS, Zabbix/Nmap, RustDesk, Proxmox.</p>
+        <div class="tags"><span class="tag">4 réalisations</span></div>
+      </div>
+      <div class="card">
+        <h3>A3 — Développer la présence en ligne</h3>
+        <p>Non mobilisée directement lors des réalisations listées (compétence transversale du portfolio).</p>
+        <div class="tags"><span class="tag">0 réalisation</span></div>
+      </div>
+      <div class="card">
+        <h3>A4 — Travailler en mode projet</h3>
+        <p>Mobilisée lors de : déploiement web, vSphere HA, RustDesk.</p>
+        <div class="tags"><span class="tag">3 réalisations</span></div>
+      </div>
+      <div class="card">
+        <h3>A5 — Mettre en place et exploiter des services</h3>
+        <p>Mobilisée lors de : Active Directory, PfSense, automatisation, ToIP, déploiement web, vSphere HA, RustDesk, brassage réseau.</p>
+        <div class="tags"><span class="tag">8 réalisations</span></div>
+      </div>
+      <div class="card">
+        <h3>A6 — Organiser son développement professionnel</h3>
+        <p>Mobilisée lors de : portfolio/veille, veille RustDesk/Alpine Linux.</p>
+        <div class="tags"><span class="tag">2 réalisations</span></div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>Portfolio BTS SIO &mdash; DRIDI Abd Errahmane &mdash; Option SISR &mdash; 2024&ndash;2026</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

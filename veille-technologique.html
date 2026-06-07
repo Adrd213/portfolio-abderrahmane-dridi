@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veille Technologique — Portfolio DRIDI Abd Errahmane</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <div class="nav-container">
+      <a class="nav-logo" href="index.html">DRIDI <span>Abd Errahmane</span></a>
+
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="bts-sio.html">BTS SIO</a></li>
+
+        <li>
+          <button class="nav-dropdown-toggle" aria-haspopup="true">
+            Stages <span class="arrow">&#9660;</span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="stage-1ere-annee.html">Stage 1ère année</a>
+            <a href="stage-2eme-annee.html">Stage 2ème année</a>
+          </div>
+        </li>
+
+        <li><a href="veille-technologique.html" class="active">Veille Technologique</a></li>
+        <li><a href="tableau-competences.html">Tableau de compétences E4</a></li>
+
+        <li>
+          <button id="theme-toggle" aria-label="Changer de thème">☾ Thème sombre</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== CONTENU PRINCIPAL ===== -->
+  <main>
+
+    <div class="page-header">
+      <h1>Veille Technologique</h1>
+      <p>RustDesk et la souveraineté numérique — Assistance à distance Open Source auto-hébergée</p>
+    </div>
+
+    <!-- Présentation du sujet -->
+    <div class="veille-card">
+      <h3>Sujet de veille</h3>
+      <p>
+        <strong>Problématique :</strong> Comment garantir une assistance à distance performante tout en conservant la maîtrise totale des flux et des données de connexion ?
+      </p>
+      <div class="tags">
+        <span class="tag">RustDesk</span>
+        <span class="tag">Souveraineté numérique</span>
+        <span class="tag">Open Source</span>
+        <span class="tag">Self-hosting</span>
+        <span class="tag">PKI / TLS</span>
+        <span class="tag">Alpine Linux</span>
+        <span class="tag">ANSSI</span>
+      </div>
+    </div>
+
+    <!-- Méthodologie -->
+    <h2 class="section-title">Méthodologie de veille</h2>
+    <div class="veille-card">
+      <p>
+        Pour réaliser cette veille, j'ai mis en place une routine hebdomadaire de 20 minutes chaque lundi matin, en suivant une méthodologie structurée en cinq étapes :
+      </p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">Étape 1 — Collecter</div>
+          <h4>Agrégation des sources</h4>
+          <p>Utilisation de <strong>Feedly</strong> pour agréger les flux RSS de sites spécialisés (L'Informaticien, Le Monde Informatique) et de <strong>Google Alerts</strong> sur les mots-clés « RustDesk », « Remote Desktop Security » et « Souveraineté numérique ».</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Étape 2 — Filtrer</div>
+          <h4>Sélection des articles pertinents</h4>
+          <p>Sélection des articles traitant spécifiquement de l'auto-hébergement (Self-hosting) et des vulnérabilités des solutions propriétaires (TeamViewer, AnyDesk).</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Étape 3 — Analyser</div>
+          <h4>Étude de l'impact métier</h4>
+          <p>Étude de l'impact du passage à des solutions Open Source sur la sécurité des données au sein d'un organisme comme le GRETA.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Étape 4 — Synthétiser</div>
+          <h4>Rédaction de fiches</h4>
+          <p>Rédaction de fiches dans <strong>Notion</strong> résumant les évolutions logicielles et les bonnes pratiques de durcissement (Hardening).</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Étape 5 — Diffuser</div>
+          <h4>Présentation au tuteur</h4>
+          <p>Présentation des résultats à mon tuteur, M. Gissinger, pour valider les choix techniques du projet RustDesk.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contexte -->
+    <h2 class="section-title">Contexte technologique (2026)</h2>
+    <div class="veille-card">
+      <p>
+        Le secteur de l'informatique en 2026 est marqué par deux tendances majeures : une adoption massive de l'intelligence artificielle dans les outils d'administration et une augmentation significative des cyberattaques ciblant les solutions d'accès à distance. Les solutions propriétaires classiques de type SaaS (TeamViewer, AnyDesk) font transiter les données par des serveurs tiers, ce qui pose un risque de confidentialité non négligeable pour les organisations traitant des données sensibles.
+      </p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Solution</th>
+              <th>Type</th>
+              <th>Hébergement des données</th>
+              <th>Coût</th>
+              <th>Souveraineté</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>TeamViewer</strong></td>
+              <td>Propriétaire / SaaS</td>
+              <td>Serveurs tiers (Allemagne)</td>
+              <td>Licence annuelle élevée</td>
+              <td class="check">&#10007;</td>
+            </tr>
+            <tr>
+              <td><strong>AnyDesk</strong></td>
+              <td>Propriétaire / SaaS</td>
+              <td>Serveurs tiers</td>
+              <td>Licence annuelle</td>
+              <td class="check">&#10007;</td>
+            </tr>
+            <tr>
+              <td><strong>RustDesk (auto-hébergé)</strong></td>
+              <td>Open Source</td>
+              <td>Serveur interne (GRETA)</td>
+              <td>Gratuit (infrastructure propre)</td>
+              <td class="check" style="color: var(--accent);">&#10003;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Analyse RustDesk -->
+    <h2 class="section-title">Analyse : RustDesk face aux enjeux de souveraineté</h2>
+
+    <div class="veille-card">
+      <h3>Qu'est-ce que RustDesk ?</h3>
+      <p>
+        RustDesk est une solution d'assistance à distance open source, écrite en Rust, qui permet à toute organisation d'auto-héberger son propre serveur de signal (serveur d'ID, <code>hbbs</code>) et son propre serveur de relais (<code>hbbr</code>). Contrairement aux solutions cloud, aucune donnée de connexion ne transite par des infrastructures tierces.
+      </p>
+      <p>
+        Pendant mon stage au GRETA, j'ai analysé que l'utilisation d'Alpine Linux pour héberger RustDesk répondait à la fois à un besoin de performance (empreinte mémoire inférieure à 150 Mo) et de sécurité (réduction de la surface d'attaque par rapport à une installation Debian standard).
+      </p>
+    </div>
+
+    <div class="veille-card">
+      <h3>Comparatif : Debian vs Alpine Linux pour l'hébergement de RustDesk</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Critère</th>
+              <th>Debian (Docker)</th>
+              <th>Alpine Linux (Bare Metal)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Empreinte disque</td>
+              <td>~1 Go (avec Docker)</td>
+              <td>&lt; 150 Mo</td>
+            </tr>
+            <tr>
+              <td>Consommation RAM</td>
+              <td>Élevée (couches Docker)</td>
+              <td>Minimale</td>
+            </tr>
+            <tr>
+              <td>Surface d'attaque</td>
+              <td>Importante (nombreux paquets)</td>
+              <td>Réduite (système minimaliste)</td>
+            </tr>
+            <tr>
+              <td>Gestion des services</td>
+              <td>systemd / Docker-Compose</td>
+              <td>OpenRC (scripts personnalisés)</td>
+            </tr>
+            <tr>
+              <td>Niveau de Hardening</td>
+              <td>Moyen</td>
+              <td>Élevé</td>
+            </tr>
+            <tr>
+              <td>Complexité d'installation</td>
+              <td>Faible (Docker facilite le déploiement)</td>
+              <td>Moyenne (configuration manuelle)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="veille-card">
+      <h3>Sécurisation renforcée : la PKI et les certificats TLS</h3>
+      <p>
+        Ma veille m'a permis d'identifier que les clés de sécurité par défaut de RustDesk ne sont pas suffisantes pour un environnement de production. J'ai donc implémenté une PKI (Public Key Infrastructure) complète, une pratique recommandée par l'ANSSI pour garantir l'identité des serveurs :
+      </p>
+      <ul>
+        <li><strong>Génération d'une Autorité de Certification (Root CA)</strong> avec OpenSSL.</li>
+        <li><strong>Création de certificats serveurs</strong> avec l'extension SAN (Subject Alternative Name) incluant l'adresse IP et le FQDN du serveur.</li>
+        <li><strong>Chiffrement de bout en bout</strong> : chaque connexion entre le technicien et le client est authentifiée par un certificat de confiance interne.</li>
+      </ul>
+      <div class="info-box">
+        <strong>Recommandation ANSSI</strong>
+        L'Agence Nationale de la Sécurité des Systèmes d'Information recommande l'utilisation de certificats TLS avec extension SAN pour garantir l'identité des serveurs dans les environnements de production. Cette pratique élimine les risques d'attaques de type « Man-in-the-Middle ».
+      </div>
+    </div>
+
+    <!-- Impact métier -->
+    <h2 class="section-title">Impact métier et conclusion</h2>
+    <div class="veille-card">
+      <p>Cette veille a démontré qu'une solution Open Source auto-hébergée offre une agilité supérieure aux solutions propriétaires sur trois axes fondamentaux :</p>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">&#128176;</div>
+          <h3>Coût</h3>
+          <p>Suppression des licences annuelles onéreuses. La seule dépense est l'infrastructure d'hébergement, déjà disponible au sein du GRETA.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#128274;</div>
+          <h3>Sécurité</h3>
+          <p>Maîtrise totale de la chaîne de confiance. Le chiffrement de bout en bout est géré en interne, sans dépendance à un tiers.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#127760;</div>
+          <h3>Souveraineté</h3>
+          <p>Aucune dépendance vis-à-vis d'un éditeur étranger. Les logs et les flux de connexion restent au sein du réseau du GRETA.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outils de veille -->
+    <h2 class="section-title">Outils de veille utilisés</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Outil</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Feedly</strong></td>
+            <td>Agrégation des flux RSS de sites spécialisés (L'Informaticien, Le Monde Informatique)</td>
+          </tr>
+          <tr>
+            <td><strong>Google Alerts</strong></td>
+            <td>Surveillance des mots-clés « RustDesk », « Remote Desktop Security », « Souveraineté numérique »</td>
+          </tr>
+          <tr>
+            <td><strong>CERT-FR</strong></td>
+            <td>Surveillance des vulnérabilités sur les protocoles de bureau à distance</td>
+          </tr>
+          <tr>
+            <td><strong>GitHub</strong></td>
+            <td>Suivi du « Changelog » officiel de RustDesk pour anticiper les mises à jour de sécurité</td>
+          </tr>
+          <tr>
+            <td><strong>Perplexity AI</strong></td>
+            <td>Synthèse des comparatifs de performances entre distributions Linux légères (Alpine vs Debian Slim)</td>
+          </tr>
+          <tr>
+            <td><strong>Notion</strong></td>
+            <td>Rédaction et archivage des fiches de veille hebdomadaires</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>Portfolio BTS SIO &mdash; DRIDI Abd Errahmane &mdash; Option SISR &mdash; 2024&ndash;2026</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

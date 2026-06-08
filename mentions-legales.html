@@ -3,8 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mentions Légales — Portfolio DRIDI Abd Errahmane</title>
+  <title>Mentions Légales & RGPD — Portfolio DRIDI Abd Errahmane</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .legal-section {
+      margin-bottom: 2.5rem;
+    }
+    .legal-section h2 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.2rem;
+      color: var(--accent);
+    }
+    .legal-section h3 {
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      color: var(--text-primary);
+    }
+    .legal-list {
+      padding-left: 1.5rem;
+    }
+    .legal-list li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -34,6 +56,7 @@
         <li><a href="veille-technologique.html">Veille Technologique</a></li>
         <li><a href="tableau-competences.html">Tableau de compétences E4</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="mentions-legales.html" class="active">Mentions Légales</a></li>
 
         <li>
           <button id="theme-toggle" aria-label="Changer de thème">☾ Thème sombre</button>
@@ -46,52 +69,89 @@
   <main>
 
     <div class="page-header">
-      <h1>Mentions Légales</h1>
-      <p>Conformément aux dispositions des articles 6-III et 19 de la Loi n° 2004-575 du 21 juin 2004 pour la Confiance dans l'Économie Numérique (L.C.E.N.).</p>
+      <h1>Mentions Légales & RGPD</h1>
+      <p>Informations obligatoires et politique de protection des données personnelles.</p>
     </div>
 
     <div class="rapport-section">
-      <h2>1. Éditeur du site</h2>
-      <p>
-        Le présent site est édité par :<br>
-        <strong>DRIDI Abd Errahmane</strong><br>
-        Étudiant en BTS SIO (Services Informatiques aux Organisations)<br>
-        Contact : Via le <a href="contact.html" class="text-accent">formulaire de contact</a>.
-      </p>
+      
+      <!-- 1. Édition du site -->
+      <section class="legal-section">
+        <h2>1. Édition du site</h2>
+        <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
+        <p>
+          <strong>Propriétaire du site :</strong> DRIDI Abd Errahmane<br>
+          <strong>Statut :</strong> Étudiant en BTS SIO (Services Informatiques aux Organisations)<br>
+          <strong>Contact :</strong> Via le formulaire de contact disponible sur le site.
+        </p>
+      </section>
 
-      <h2>2. Hébergement</h2>
-      <p>
-        Le site est hébergé par :<br>
-        <strong>[NOM DE L'HÉBERGEUR - ex: GitHub Pages / Netlify / Hostinger]</strong><br>
-        [Adresse de l'hébergeur]<br>
-        [Site web de l'hébergeur]
-      </p>
+      <!-- 2. Hébergement -->
+      <section class="legal-section">
+        <h2>2. Hébergement</h2>
+        <p>Le site est hébergé par :<br>
+          <strong>[À COMPLÉTER PAR L'UTILISATEUR]</strong> (ex: GitHub Pages / Netlify / Hostinger)<br>
+          L'hébergeur assure le stockage des fichiers constituant le site et sa disponibilité publique.
+        </p>
+      </section>
 
-      <h2>3. Propriété intellectuelle</h2>
-      <p>
-        L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
-      </p>
-      <p>
-        La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse de l'éditeur.
-      </p>
+      <!-- 3. Propriété intellectuelle -->
+      <section class="legal-section">
+        <h2>3. Propriété intellectuelle</h2>
+        <p>DRIDI Abd Errahmane est propriétaire des droits de propriété intellectuelle ou détient les droits d’usage sur tous les éléments accessibles sur le site internet, notamment les textes, images, graphismes, logos, vidéos, architecture, icônes et sons.</p>
+        <p>Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de DRIDI Abd Errahmane.</p>
+      </section>
 
-      <h2>4. Protection des données personnelles (RGPD)</h2>
-      <p>
-        Les informations recueillies via le formulaire de contact (nom, email, sujet, message) sont transmises via le service <strong>Formspree</strong> et sont destinées exclusivement à répondre à vos demandes de contact.
-      </p>
-      <p>
-        Conformément à la loi « informatique et libertés » et au RGPD, vous pouvez exercer votre droit d'accès aux données vous concernant et les faire rectifier ou supprimer en contactant l'éditeur du site.
-      </p>
+      <!-- 4. Politique de confidentialité et RGPD -->
+      <section class="legal-section">
+        <h2>4. Politique de confidentialité (RGPD)</h2>
+        <p>Le site s'engage à ce que la collecte et le traitement de vos données soient conformes au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.</p>
+        
+        <h3>Collecte des données</h3>
+        <p>Les seules données personnelles collectées sur ce site le sont via le formulaire de contact :</p>
+        <ul class="legal-list">
+          <li>Nom complet</li>
+          <li>Adresse e-mail</li>
+          <li>Sujet du message</li>
+          <li>Contenu du message</li>
+        </ul>
 
-      <h2>5. Cookies</h2>
-      <p>
-        Ce site utilise uniquement des cookies techniques nécessaires à son fonctionnement (notamment pour la mémorisation de votre choix de thème clair/sombre via le <code>localStorage</code> du navigateur). Aucun cookie de suivi publicitaire ou statistique n'est utilisé.
-      </p>
+        <h3>Finalité du traitement</h3>
+        <p>Ces données sont collectées uniquement pour permettre à l'éditeur de répondre aux demandes formulées via le formulaire de contact. Elles ne sont en aucun cas cédées, louées ou vendues à des tiers.</p>
 
-      <h2>6. Responsabilité</h2>
-      <p>
-        L'éditeur s'efforce d'assurer l'exactitude des informations diffusées sur ce site. Toutefois, il ne peut garantir l'exhaustivité ou l'absence de modification par un tiers (intrusion, virus). Le site contient des liens vers des sites externes sur lesquels l'éditeur n'exerce aucun contrôle.
-      </p>
+        <h3>Base légale</h3>
+        <p>Le traitement des données est basé sur le <strong>consentement</strong> de l'utilisateur, qui accepte de transmettre ses informations en cliquant sur le bouton "Envoyer le message".</p>
+
+        <h3>Destinataires et Transfert</h3>
+        <p>Les données sont traitées par le service tiers <strong>Formspree</strong> (Formspree Inc.), qui agit en tant que sous-traitant technique pour l'acheminement des emails. Formspree s'engage à respecter les standards de sécurité et de confidentialité requis.</p>
+
+        <h3>Durée de conservation</h3>
+        <p>Les données sont conservées le temps nécessaire au traitement de la demande de contact et pour une durée maximale de 12 mois après le dernier échange.</p>
+
+        <h3>Vos droits</h3>
+        <p>Conformément à la réglementation européenne, vous disposez des droits suivants :</p>
+        <ul class="legal-list">
+          <li>Droit d'accès et de rectification</li>
+          <li>Droit à l'effacement de vos données</li>
+          <li>Droit à la limitation du traitement</li>
+          <li>Droit d'opposition au traitement</li>
+        </ul>
+        <p>Pour exercer ces droits, vous pouvez envoyer une demande via le formulaire de contact du site.</p>
+      </section>
+
+      <!-- 5. Cookies -->
+      <section class="legal-section">
+        <h2>5. Cookies</h2>
+        <p>Le site n'utilise aucun cookie de suivi (tracking), de profilage ou de publicité.</p>
+        <p>Un seul cookie technique est utilisé via le <code>localStorage</code> du navigateur pour mémoriser votre préférence d'affichage (Thème Clair ou Thème Sombre). Ce cookie est indispensable au confort de navigation et ne contient aucune donnée personnelle.</p>
+      </section>
+
+      <!-- 6. Limitation de responsabilité -->
+      <section class="legal-section">
+        <h2>6. Limitation de responsabilité</h2>
+        <p>DRIDI Abd Errahmane ne pourra être tenu pour responsable des dommages directs et indirects causés au matériel de l’utilisateur lors de l’accès au site. L'éditeur décline toute responsabilité quant à l'utilisation qui pourrait être faite des informations et contenus présents sur le site.</p>
+      </section>
+
     </div>
 
   </main>
@@ -99,7 +159,8 @@
   <!-- ===== FOOTER ===== -->
   <footer>
     <div style="margin-bottom: 1rem;">
-      <a href="mentions-legales.html" style="margin: 0 10px;">Mentions Légales</a>
+      <a href="mentions-legales.html" style="margin: 0 10px;">Mentions Légales</a> | 
+      <a href="contact.html" style="margin: 0 10px;">Contact</a>
     </div>
     <p>Portfolio BTS SIO &mdash; DRIDI Abd Errahmane &mdash; Option SISR &mdash; 2024&ndash;2026</p>
   </footer>
